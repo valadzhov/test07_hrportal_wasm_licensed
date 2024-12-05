@@ -1,0 +1,52 @@
+@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+
+<div class="column-layout master-view-container">
+    <IgbNavbar class="navbar" master_view-scope>
+        <div class="row-layout group">
+            <h6 class="h6">
+                Rapid Fission Inc.
+            </h6>
+            <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" @onclick="@(e => Navigate("/home"))" class="button" master_view-scope>
+                HOME
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" @onclick="@(e => Navigate("/my_info"))" class="button" master_view-scope>
+                MY INFO
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbButton Variant="ButtonVariant.Flat" Disabled="true" DisplayType="ButtonBaseType.Button" class="button" master_view-scope>
+                PEOPLE
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+            <IgbButton Variant="ButtonVariant.Flat" Disabled="true" DisplayType="ButtonBaseType.Button" class="button" master_view-scope>
+                MY FILES
+                <IgbRipple></IgbRipple>
+            </IgbButton>
+        </div>
+        <div slot="end" class="row-layout group_1"></div>
+        <IgbIconButton slot="end" Variant="IconButtonVariant.Flat">
+            <span class="material-icons">
+                notifications
+            </span>
+            <IgbRipple></IgbRipple>
+        </IgbIconButton>
+        <IgbAvatar Src="assets/Avatar6.png" slot="end" Shape="AvatarShape.Circle" class="avatar" master_view-scope></IgbAvatar>
+    </IgbNavbar>
+    <div class="view-container">
+        @Body
+    </div>
+    <div class="row-layout footer">
+        <p class="typography__body-2 text">
+            (c) 2020 IndigoDesign Inc.
+        </p>
+    </div>
+</div>
+
+@code {
+
+    public void Navigate(string path)
+    {
+        NavigationManager.NavigateTo(path);
+    }
+}

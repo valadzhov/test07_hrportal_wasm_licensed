@@ -1,0 +1,191 @@
+@page "/my_info"
+
+<div class="column-layout my-info-container">
+    <div class="column-layout page-content">
+        <div class="row-layout header">
+            <div class="row-layout group">
+                <div class="row-layout group_1">
+                    <img src="assets/Avatar6.png" class="image" />
+                </div>
+                <div class="column-layout group_2">
+                    <div class="column-layout group_3">
+                        <h4 class="content_1">
+                            Erin Brockovich
+                        </h4>
+                        <p class="typography__subtitle-1 content_1">
+                            Water Quality Specialist
+                        </p>
+                    </div>
+                    <div class="row-layout group_4">
+                        <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" class="button button_1" my_info-scope>
+                            Personal
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
+                        <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" class="button button_2" my_info-scope>
+                            Job
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
+                        <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" class="button button_3" my_info-scope>
+                            Tme-off
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
+                        <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" class="button button_4" my_info-scope>
+                            Emergency
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
+                        <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" class="button button_5" my_info-scope>
+                            Documents
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
+                        <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" class="button button_6" my_info-scope>
+                            Benefits
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
+                        <IgbButton Variant="ButtonVariant.Flat" DisplayType="ButtonBaseType.Button" class="button button_7" my_info-scope>
+                            Pay info
+                            <IgbRipple></IgbRipple>
+                        </IgbButton>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-layout content">
+            <div class="row-layout group_5">
+                <div class="column-layout group_6">
+                    <div class="column-layout group_7">
+                        <p class="typography__subtitle-2 text">
+                            Hire Date
+                        </p>
+                        <p class="typography__body-2 text_1">
+                            Feb 01, 2010
+                        </p>
+                        <p class="typography__caption text_1">
+                            10y-10m-7d
+                        </p>
+                    </div>
+                    <div class="column-layout group_8">
+                        <div class="row-layout group_9">
+                            <span class="material-icons icon">
+                                waves
+                            </span>
+                            <p class="typography__body-2 content_2">
+                                Waste water mgmt.
+                            </p>
+                        </div>
+                        <div class="row-layout group_9">
+                            <span class="material-icons icon">
+                                domain
+                            </span>
+                            <p class="typography__body-2 content_2">
+                                Nuclear Disposal
+                            </p>
+                        </div>
+                        <div class="row-layout group_9">
+                            <span class="material-icons icon">
+                                location_on
+                            </span>
+                            <p class="typography__body-2 content_2">
+                                California, USA
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column-layout group_10">
+                        <p class="typography__subtitle-2 text">
+                            Manager
+                        </p>
+                        <div class="row-layout group_11">
+                            <IgbAvatar Src="assets/Avatar1.png" Shape="AvatarShape.Circle" class="avatar" my_info-scope></IgbAvatar>
+                            <p class="typography__body-2 content_2">
+                                Donni Darko
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="column-layout group_12">
+                    <div class="row-layout group_13">
+                        <span class="material-icons icon_1">
+                            perm_contact_calendar
+                        </span>
+                        <h6 class="content_2">
+                            Personal
+                        </h6>
+                    </div>
+                    <p class="typography__subtitle-1 text_1">
+                        Basic Information
+                    </p>
+                    <div class="row-layout group_14">
+                        <IgbInput Label="First name" Disabled="true" Outlined="true" @bind-Value="@_value" class="user-input" my_info-scope></IgbInput>
+                        <IgbInput Label="Middle name" Disabled="true" Outlined="true" @bind-Value="@_value1" class="user-input" my_info-scope></IgbInput>
+                        <IgbInput Label="Last name" Disabled="true" Outlined="true" @bind-Value="@_value2" class="user-input" my_info-scope></IgbInput>
+                    </div>
+                    <div class="row-layout group_14">
+                        <IgbSelect Outlined="true" Label="Gender" Value="@_value3" Change="@(e => _value3 = e.Detail.Value)" class="user-input" my_info-scope>
+                            <IgbSelectItem Value="1">
+                                Male
+                            </IgbSelectItem>
+                            <IgbSelectItem Value="2">
+                                Female
+                            </IgbSelectItem>
+                            <IgbSelectItem Value="3">
+                                It's complicated
+                            </IgbSelectItem>
+                        </IgbSelect>
+                        <IgbSelect Outlined="true" Label="Marital status" class="user-input" my_info-scope>
+                            <IgbSelectItem Value="1">
+                                Married
+                            </IgbSelectItem>
+                            <IgbSelectItem Value="1">
+                                Single
+                            </IgbSelectItem>
+                        </IgbSelect>
+                    </div>
+                    <div class="row-layout group_15">
+                        <IgbInput Label="Address" Required Outlined="true" @bind-Value="@_value4" class="input" my_info-scope></IgbInput>
+                    </div>
+                    <div class="row-layout group_16">
+                        <IgbInput Label="City" Required Outlined="true" @bind-Value="@_value5" class="user-input_1" my_info-scope></IgbInput>
+                        <IgbInput Label="State" Required Outlined="true" @bind-Value="@_value6" class="input_2" my_info-scope></IgbInput>
+                        <IgbInput DisplayType="InputType.Number" Label="Zip/Postal Code" Required Outlined="true" Value="@_value7.ToString()" Change="@(e => _value7 = double.Parse(e.Detail.ToString().ToString()))" class="user-input_1" my_info-scope></IgbInput>
+                    </div>
+                    <p class="typography__subtitle-1 text_1">
+                        Contact
+                    </p>
+                    <div class="row-layout group_17">
+                        <IgbInput DisplayType="InputType.Tel" Label="Home phone" Outlined="true" class="user-input" my_info-scope>
+                            <span slot="prefix">
+                                <span class="material-icons icon_2">
+                                    home
+                                </span>
+                            </span>
+                        </IgbInput>
+                        <IgbInput DisplayType="InputType.Tel" Label="Work phone" Outlined="true" class="user-input" my_info-scope>
+                            <span slot="prefix">
+                                <span class="material-icons icon_2">
+                                    domain
+                                </span>
+                            </span>
+                        </IgbInput>
+                        <IgbInput DisplayType="InputType.Tel" Label="Mobile phone" Outlined="true" class="user-input" my_info-scope>
+                            <span slot="prefix">
+                                <span class="material-icons icon_2">
+                                    person
+                                </span>
+                            </span>
+                        </IgbInput>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private string _value = "Erin";
+    private string _value1 = "First name";
+    private string _value2 = "Brockovich";
+    private string _value3 = "2";
+    private string _value4 = "123 Wallaby Lane";
+    private string _value5 = "Sacramento";
+    private string _value6 = "CA";
+    private double _value7 = 94203;
+}
